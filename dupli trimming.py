@@ -1,10 +1,10 @@
 import CKdata
 def has_varn(entry,*varns):
     varncount={}
-    for i in range(len(varns)):
+    for varn in varns:
         for ckm in entry:
-            if varns[i] in ckm:
-                varncount[varns[i]]=varncount.get(varns[i],0)+1
+            if varn in ckm:
+                varncount[varn]=varncount.get(varn,0)+1
     if len(varncount)==len(varns):
         return True
     return False
